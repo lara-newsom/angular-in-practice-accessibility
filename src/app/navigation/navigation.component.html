@@ -1,0 +1,19 @@
+<header class="site-header">
+  <div class="logo">
+    <a href="/">The Every Hotel</a>
+  </div>
+  <nav class="main-nav">
+    <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen()">
+      <span class="sr-only">Menu</span>
+      <span class="hamburger"></span>
+    </button>
+    <ul class="nav-links" [class.is-open]="isMenuOpen()">
+      <li><a href="/home">Home</a></li>
+      <li><a href="/rooms">Rooms</a></li>
+      <li><a href="/amenities">Amenities</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/book">Book</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>

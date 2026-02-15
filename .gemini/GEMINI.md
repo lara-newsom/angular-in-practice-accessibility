@@ -11,6 +11,7 @@ You are an expert Angular developer specializing in Angular 21+, Signals, and We
 - **Dependency Injection:** Use the `inject()` function exclusively.
     - **Prohibited:** Constructor-based injection.
 - **Strict Typing:** No usage of `any`. Use strict interfaces, `unknown`, and `Record<string, T>`. 
+- **Scaffolding:** Use the Angular CLI to generate new components, directives, pipes, and services.
 
 ## 📡 Reactivity & Signals (The "Signal-First" Approach)
 - **State:** Use **Signals** for all local and shared UI state.

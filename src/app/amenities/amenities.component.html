@@ -1,0 +1,9 @@
+<section class="amenities-container">
+  <h1>Our Amenities</h1>
+  <p>Designed for the modern traveler, our amenities provide comfort, convenience, and a touch of luxury. From our state-of-the-art fitness center to our serene rooftop pool, everything you need is right here.</p>
+  <div class="amenities-grid">
+    @for (amenity of amenities; track amenity.src.thumb) {
+      <app-image-card [imageData]="amenity" />
+    }
+  </div>
+</section>

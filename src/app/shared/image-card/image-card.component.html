@@ -1,0 +1,5 @@
+<picture>
+  <source [srcset]="imageData().src.large" media="(min-width: 751px)">
+  <source [srcset]="imageData().src.medium" media="(min-width: 376px)">
+  <img [srcset]="imageData().src.thumb" [src]="imageData().src.medium" [alt]="imageData().alt">
+</picture>
