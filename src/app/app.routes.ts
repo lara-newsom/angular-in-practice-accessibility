@@ -1,17 +1,16 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { RoomsComponent } from './rooms/rooms.component';
-import { AmenitiesComponent } from './amenities/amenities.component';
-import { AboutComponent } from './about/about.component';
+import { Home } from './home/home';
+import { Rooms } from './rooms/rooms';
+import { Amenities } from './amenities/amenities';
+import { About } from './about/about';
+import { Booking } from './booking/booking';
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'rooms', component: RoomsComponent },
-  { path: 'amenities', component: AmenitiesComponent },
-  { path: 'about', component: AboutComponent },
-  // NOTE: Book and Contact components are not yet created.
-  // { path: 'book', component: BookComponent },
-  // { path: 'contact', component: ContactComponent },
+  { path: 'home', component: Home },
+  { path: 'rooms', component: Rooms },
+  { path: 'amenities', component: Amenities },
+  { path: 'about', component: About },
+  { path: 'book', component: Booking },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', redirectTo: '/home' } // Wildcard route for a 404 page could be added later
+  { path: '**', redirectTo: '/home' }
 ];

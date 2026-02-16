@@ -1,15 +1,15 @@
 import { Component, signal } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink, NgOptimizedImage],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  imports: [RouterLink, NgOptimizedImage],
+  templateUrl: './home.html',
+  styleUrls: ['./home.scss']
 })
-export class HomeComponent {
+export class Home {
   galleryImages = signal([
     {
       src: 'assets/medium/lobby_1.jpg',

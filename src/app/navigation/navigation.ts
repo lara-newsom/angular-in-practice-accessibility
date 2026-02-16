@@ -1,15 +1,15 @@
 import { Component, signal } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [CommonModule, RouterLink, NgOptimizedImage],
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  imports: [RouterLink, NgOptimizedImage],
+  templateUrl: './navigation.html',
+  styleUrls: ['./navigation.scss']
 })
-export class NavigationComponent {
+export class Navigation {
   isMenuOpen = signal(false);
 
   toggleMenu() {

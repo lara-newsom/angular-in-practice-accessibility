@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ImageCardComponent } from '../shared/image-card/image-card.component';
+import { ImageCard } from '../shared/image-card/image-card';
 import { ROOM_IMAGES, ImageData } from '../image-data';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-rooms',
-  imports: [CommonModule, ImageCardComponent],
-  templateUrl: './rooms.component.html',
-  styleUrls: ['./rooms.component.scss']
+  imports: [ ImageCard, RouterLink],
+  templateUrl: './rooms.html',
+  styleUrls: ['./rooms.scss']
 })
-export class RoomsComponent {
+export class Rooms {
   rooms: ImageData[] = ROOM_IMAGES;
   amenities = [
     'Plush queen-sized beds',

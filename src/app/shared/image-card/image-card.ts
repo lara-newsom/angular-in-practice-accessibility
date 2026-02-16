@@ -5,9 +5,9 @@ import { ImageData } from '../../image-data';
 @Component({
   selector: 'app-image-card',
   imports: [CommonModule],
-  templateUrl: './image-card.component.html',
-  styleUrls: ['./image-card.component.scss']
+  templateUrl: './image-card.html',
+  styleUrls: ['./image-card.scss']
 })
-export class ImageCardComponent {
+export class ImageCard {
   imageData = input.required<ImageData>();
 }
