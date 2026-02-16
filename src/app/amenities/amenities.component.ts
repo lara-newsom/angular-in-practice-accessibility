@@ -11,4 +11,16 @@ import { AMENITIES_IMAGES, ImageData } from '../image-data';
 })
 export class AmenitiesComponent {
   amenities: ImageData[] = AMENITIES_IMAGES;
+  sharedAmenities: string[] = [
+    '24-hour front desk',
+    'Rooftop pool',
+    'Fitness center',
+    'On-site restaurant and bar',
+    'Room service',
+    'Free Wi-Fi',
+    'Concierge services',
+    'Business center',
+    'Valet parking',
+    'Pet-friendly rooms'
+  ];
 }

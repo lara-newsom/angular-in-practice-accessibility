@@ -3,6 +3,7 @@
   background-color: var(--background-color);
   border-bottom: 1px solid var(--light-gray-color);
   padding: var(--spacing-md) var(--spacing-lg);
+  font-family: var(--font-family-sans-serif);
 }
 
 .site-header {
@@ -13,11 +14,23 @@
   margin: 0 auto;
 }
 
+
+
 .logo a {
   font-weight: bold;
   font-size: var(--font-size-lg);
   text-decoration: none;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  .logo-text {
+    font-family: var(--font-family-sans-serif);
+    font-size: 2.0rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--header-color);
+  }
 }
 
 .menu-toggle {

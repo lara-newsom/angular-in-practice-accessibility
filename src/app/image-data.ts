@@ -9,7 +9,7 @@ export interface ImageData {
 
 export const AMENITIES_IMAGES: ImageData[] = [
   {
-    alt: 'A person enjoying the hotel\'s rooftop pool with a city view.',
+    alt: 'A beautiful outdoor pool with an elegant modern waterfall. A cozy seating area with an umbrella and a table is poolside.',
     src: {
       thumb: 'assets/thumb/ammenities_1.jpg',
       medium: 'assets/medium/ammenities_1.jpg',
@@ -25,7 +25,7 @@ export const AMENITIES_IMAGES: ImageData[] = [
     },
   },
   {
-    alt: 'A relaxing view of the hotel spa and wellness center.',
+    alt: 'A relaxing view of the hotel\'s outdoor lap pool.',
     src: {
       thumb: 'assets/thumb/ammenities_3.jpg',
       medium: 'assets/medium/ammenities_3.jpg',
@@ -33,7 +33,7 @@ export const AMENITIES_IMAGES: ImageData[] = [
     },
   },
   {
-    alt: 'The hotel\'s business center with computers and printing services.',
+    alt: 'The hotel serves a five star breakfast buffet with a variety of delicious options.',
     src: {
       thumb: 'assets/thumb/ammenities_4.jpg',
       medium: 'assets/medium/ammenities_4.jpg',
@@ -41,7 +41,7 @@ export const AMENITIES_IMAGES: ImageData[] = [
     },
   },
   {
-    alt: 'A delicious breakfast spread served at the hotel restaurant.',
+    alt: 'The hotel fitness center features free weights to keep you in shape.',
     src: {
       thumb: 'assets/thumb/ammenities_5.jpg',
       medium: 'assets/medium/ammenities_5.jpg',
@@ -52,7 +52,7 @@ export const AMENITIES_IMAGES: ImageData[] = [
 
 export const ROOM_IMAGES: ImageData[] = [
     {
-        alt: 'A beautifully designed hotel room with a large bed and city view.',
+        alt: 'The city suite features a corner window for a stunning view of the city.',
         src: {
           thumb: 'assets/thumb/room_1.jpg',
           medium: 'assets/medium/room_1.jpg',
@@ -60,7 +60,7 @@ export const ROOM_IMAGES: ImageData[] = [
         },
       },
       {
-        alt: 'A hotel room with two queen beds, perfect for families.',
+        alt: 'En suite modern facilities make every room comfortable for a night or more.',
         src: {
           thumb: 'assets/thumb/room_2.jpg',
           medium: 'assets/medium/room_2.jpg',
@@ -68,7 +68,7 @@ export const ROOM_IMAGES: ImageData[] = [
         },
       },
       {
-        alt: 'A luxurious hotel suite with a separate living area.',
+        alt: 'The balcony suites offer a quiet escape overlooking the wooded walking path.',
         src: {
           thumb: 'assets/thumb/room_3.jpg',
           medium: 'assets/medium/room_3.jpg',
@@ -76,7 +76,7 @@ export const ROOM_IMAGES: ImageData[] = [
         },
       },
       {
-        alt: 'A hotel room with a king-sized bed and a balcony overlooking the city.',
+        alt: 'Room service is available 24 hours a day offering healthy delicious options.',
         src: {
           thumb: 'assets/thumb/room_4.jpg',
           medium: 'assets/medium/room_4.jpg',
@@ -84,7 +84,7 @@ export const ROOM_IMAGES: ImageData[] = [
         },
       },
       {
-        alt: 'A stylish hotel room with modern decor and a comfortable work area.',
+        alt: 'Sleek modern walk in showers in every room.',
         src: {
           thumb: 'assets/thumb/room_5.jpg',
           medium: 'assets/medium/room_5.jpg',
@@ -92,7 +92,7 @@ export const ROOM_IMAGES: ImageData[] = [
         },
       },
       {
-        alt: 'A cozy hotel room with a plush armchair and a reading lamp.',
+        alt: 'In room amenities include tea kettle and an assortment of pillows.',
         src: {
           thumb: 'assets/thumb/room_6.jpg',
           medium: 'assets/medium/room_6.jpg',
@@ -103,7 +103,7 @@ export const ROOM_IMAGES: ImageData[] = [
 
 export const LOBBY_IMAGES: ImageData[] = [
     {
-        alt: 'The spacious and modern lobby of The Every Hotel.',
+        alt: 'Cosy up to the Palm Bar in the lobby of The Every Hotel.',
         src: {
           thumb: 'assets/thumb/lobby_1.jpg',
           medium: 'assets/medium/lobby_1.jpg',
@@ -111,7 +111,7 @@ export const LOBBY_IMAGES: ImageData[] = [
         },
       },
       {
-        alt: 'The hotel\'s front desk with friendly staff ready to assist.',
+        alt: 'The hotel has modern and stylish decor that creates a welcoming atmosphere for guests.',
         src: {
           thumb: 'assets/thumb/lobby_2.jpg',
           medium: 'assets/medium/lobby_2.jpg',
@@ -119,7 +119,7 @@ export const LOBBY_IMAGES: ImageData[] = [
         },
       },
       {
-        alt: 'A comfortable seating area in the hotel lobby.',
+        alt: 'The 1920s inspired Gatsby Lounge in the lobby of The Every Hotel.',
         src: {
           thumb: 'assets/thumb/lobby_3.jpg',
           medium: 'assets/medium/lobby_3.jpg',
@@ -127,7 +127,7 @@ export const LOBBY_IMAGES: ImageData[] = [
         },
       },
       {
-        alt: 'The elegant and welcoming entrance of The Every Hotel.',
+        alt: 'Comfortable modern conversation room with a seating for groups large or small.',
         src: {
           thumb: 'assets/thumb/lobby_4.jpg',
           medium: 'assets/medium/lobby_4.jpg',
@@ -135,7 +135,7 @@ export const LOBBY_IMAGES: ImageData[] = [
         },
       },
       {
-        alt: 'The hotel lobby at night, with warm and inviting lighting.',
+        alt: 'Daylight floods one of the seating areas on each of the guest floors.',
         src: {
           thumb: 'assets/thumb/lobby_5.jpg',
           medium: 'assets/medium/lobby_5.jpg',

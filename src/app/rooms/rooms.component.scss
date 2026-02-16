@@ -25,3 +25,7 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-lg);
 }
+
+li {
+  list-style: none;
+}

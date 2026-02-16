@@ -13,19 +13,34 @@
 }
 
 .hero-text h1 {
+  font-family: var(--font-family-sans-serif);
   font-size: 3rem;
   margin-bottom: var(--spacing-md);
 }
 
+.hero-logo {
+  display: block;
+  margin: 0 auto var(--spacing-md);
+}
+
 .hero-text p {
+  font-family: var(--font-family-sans-serif);
   font-size: var(--font-size-lg);
   margin-bottom: var(--spacing-lg);
 }
 
+.key-divider {
+  display: block;
+  margin: var(--spacing-md) auto;
+}
+
 .cta-button {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
   background-color: var(--primary-color);
   color: var(--background-color);
+  margin-top: var(--spacing-lg);
   padding: var(--spacing-sm) var(--spacing-lg);
   border-radius: var(--spacing-sm);
   text-decoration: none;
@@ -34,5 +49,84 @@
 
   &:hover, &:focus {
     background-color: #0056b3; // Darker shade of primary
+  }
+}
+
+.photo-gallery {
+  padding: var(--spacing-xl) var(--spacing-md);
+  text-align: center;
+}
+
+.photo-gallery h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.gallery-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--spacing-sm);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .gallery-image {
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-cta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-sm);
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &:hover,
+  &:focus-within {
+    .gallery-image {
+      transform: scale(1.05);
+    }
+    .gallery-cta {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

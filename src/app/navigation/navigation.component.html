@@ -1,6 +1,9 @@
 <header class="site-header">
   <div class="logo">
-    <a routerLink="/">The Every Hotel</a>
+    <a routerLink="/">
+      <img ngSrc="assets/logos/logo.svg" alt="" width="80" height="80">
+      <span class="logo-text">The Every Hotel</span>
+    </a>
   </div>
   <nav class="main-nav">
     <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen()">
