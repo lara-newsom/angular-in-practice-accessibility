@@ -1,0 +1,26 @@
+  @if (roomData(); as room) {
+    <section class="reservation-card">
+      <h2>{{ room.name }}</h2>
+      <div class="booking-details">
+        <img [ngSrc]="room.images.medium" [alt]="" width="375" height="500" priority />
+        <div>
+          <h3>Room Details</h3>
+          <p><strong>Room Type:</strong> {{ room.name }}</p>
+          <p><strong>Description:</strong> {{ room.description }}</p>
+          <p><strong>Max Occupancy:</strong> {{ room.maxOccupancy }}</p>
+          <p><strong>Price per night:</strong> ${{ room.pricePerNight }}</p>
+
+          <h3>Included Amenities</h3>
+          <ul>
+            @for (amenity of room.amenities; track amenity) {
+              <li>{{ amenity }}</li>
+            }
+          </ul>
+          <a routerLink="/book" class="cta-button">Book Now</a>
+        </div>
+      </div>
+    </section>
+  } @else {
+    <h2>Uh Oh Something Went Wrong</h2>
+    <p>Room not found.</p>
+  }

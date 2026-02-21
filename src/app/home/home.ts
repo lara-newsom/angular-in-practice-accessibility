@@ -13,19 +13,19 @@ export class Home {
   galleryImages = signal([
     {
       src: 'assets/medium/lobby_1.jpg',
-      alt: 'A view of the hotel lobby from the entrance, showing the reception desk and a seating area.',
+      alt: 'Learn more about The Every Hotel',
       route: '/about',
       cta: 'About Us'
     },
     {
       src: 'assets/medium/room_1.jpg',
-      alt: 'A clean and modern hotel room with a made bed, a small desk, and a window with a city view.',
+      alt: 'Learn more about our rooms and suites',
       route: '/rooms',
       cta: 'View our Rooms'
     },
     {
       src: 'assets/medium/ammenities_1.jpg',
-      alt: 'The hotel\'s indoor swimming pool with lounge chairs lined up along the side.',
+      alt: 'Learn more about our amenities and services',
       route: '/amenities',
       cta: 'Explore our Amenities'
     }

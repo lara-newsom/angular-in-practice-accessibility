@@ -8,9 +8,16 @@
       <li>{{ amenity }}</li>
     }
   </ul>
+  <h2>Room Types</h2>
   <div class="rooms-grid">
-    @for (room of rooms; track room.src.thumb) {
-      <app-image-card [imageData]="room" />
+    @for (room of rooms; track room.name;) {
+      <div class="gallery-item">
+        <a [routerLink]="['/rooms', room.name]">
+          <img [ngSrc]="room.images.large" [alt]="" width="375" height="500" class="gallery-image">
+          <span class="gallery-cta">{{ room.name }}</span>
+        </a>
+      </div>
     }
   </div>
 </section>
+

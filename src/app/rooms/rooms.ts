@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
-import { ImageCard } from '../shared/image-card/image-card';
-import { ROOM_IMAGES, ImageData } from '../image-data';
+import { RoomType, ROOM_TYPES } from '../shared/models/room-types';
 import { RouterLink } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-rooms',
-  imports: [ ImageCard, RouterLink],
+  standalone: true,
+  imports: [ RouterLink, NgOptimizedImage],
   templateUrl: './rooms.html',
   styleUrls: ['./rooms.scss']
 })
 export class Rooms {
-  rooms: ImageData[] = ROOM_IMAGES;
+  rooms: RoomType[] = ROOM_TYPES;
   amenities = [
     'Plush queen-sized beds',
     'High-speed Wi-Fi',

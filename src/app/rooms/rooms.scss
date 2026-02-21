@@ -29,3 +29,51 @@ p {
 li {
   list-style: none;
 }
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--spacing-sm);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .gallery-image {
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-cta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-sm);
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &:hover,
+  &:focus-within {
+    .gallery-image {
+      transform: scale(1.05);
+    }
+    .gallery-cta {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
