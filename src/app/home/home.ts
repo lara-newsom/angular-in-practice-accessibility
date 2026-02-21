@@ -24,7 +24,7 @@ export class Home {
       cta: 'View our Rooms'
     },
     {
-      src: 'assets/medium/ammenities_1.jpg',
+      src: 'assets/medium/amenities_1.jpg',
       alt: 'Learn more about our amenities and services',
       route: '/amenities',
       cta: 'Explore our Amenities'

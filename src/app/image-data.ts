@@ -11,41 +11,41 @@ export const AMENITIES_IMAGES: ImageData[] = [
   {
     alt: 'A beautiful outdoor pool with an elegant modern waterfall. A cozy seating area with an umbrella and a table is poolside.',
     src: {
-      thumb: 'assets/thumb/ammenities_1.jpg',
-      medium: 'assets/medium/ammenities_1.jpg',
-      large: 'assets/large/ammenities_1.jpg',
+      thumb: 'assets/thumb/amenities_1.jpg',
+      medium: 'assets/medium/amenities_1.jpg',
+      large: 'assets/large/amenities_1.jpg',
     },
   },
   {
     alt: 'The hotel\'s modern fitness center with state-of-the-art equipment.',
     src: {
-      thumb: 'assets/thumb/ammenities_2.jpg',
-      medium: 'assets/medium/ammenities_2.jpg',
-      large: 'assets/large/ammenities_2.jpg',
+      thumb: 'assets/thumb/amenities_2.jpg',
+      medium: 'assets/medium/amenities_2.jpg',
+      large: 'assets/large/amenities_2.jpg',
     },
   },
   {
     alt: 'A relaxing view of the hotel\'s outdoor lap pool.',
     src: {
-      thumb: 'assets/thumb/ammenities_3.jpg',
-      medium: 'assets/medium/ammenities_3.jpg',
-      large: 'assets/large/ammenities_3.jpg',
+      thumb: 'assets/thumb/amenities_3.jpg',
+      medium: 'assets/medium/amenities_3.jpg',
+      large: 'assets/large/amenities_3.jpg',
     },
   },
   {
     alt: 'The hotel serves a five star breakfast buffet with a variety of delicious options.',
     src: {
-      thumb: 'assets/thumb/ammenities_4.jpg',
-      medium: 'assets/medium/ammenities_4.jpg',
-      large: 'assets/large/ammenities_4.jpg',
+      thumb: 'assets/thumb/amenities_4.jpg',
+      medium: 'assets/medium/amenities_4.jpg',
+      large: 'assets/large/amenities_4.jpg',
     },
   },
   {
     alt: 'The hotel fitness center features free weights to keep you in shape.',
     src: {
-      thumb: 'assets/thumb/ammenities_5.jpg',
-      medium: 'assets/medium/ammenities_5.jpg',
-      large: 'assets/large/ammenities_5.jpg',
+      thumb: 'assets/thumb/amenities_5.jpg',
+      medium: 'assets/medium/amenities_5.jpg',
+      large: 'assets/large/amenities_5.jpg',
     },
   },
 ];
