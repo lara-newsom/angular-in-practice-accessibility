@@ -1,5 +1,5 @@
 <section class="rooms-container">
-  <h1>Our Rooms</h1>
+  <div class="h1">Our Rooms</div>
   <p>Every room is a sanctuary of comfort, thoughtfully designed with modern aesthetics and essential amenities to ensure a restful and productive stay.</p>
   <a routerLink="/book" class="cta-button">Book Now</a>
   <h2>In-Room Amenities</h2>
@@ -13,7 +13,7 @@
     @for (room of rooms; track room.name;) {
       <div class="gallery-item">
         <a [routerLink]="['/rooms', room.name]">
-          <img [ngSrc]="room.images.large" [alt]="" width="375" height="500" class="gallery-image">
+          <img [ngSrc]="room.images.large" [alt]="room.description" width="375" height="500" class="gallery-image" priority>
           <span class="gallery-cta">{{ room.name }}</span>
         </a>
       </div>

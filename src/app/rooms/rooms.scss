@@ -13,6 +13,15 @@ h1 {
   margin-bottom: var(--spacing-md);
 }
 
+.h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-bottom: var(--spacing-md);
+}
+
+
 p {
   margin-bottom: var(--spacing-xl);
   max-width: 800px;
@@ -35,7 +44,7 @@ li {
   overflow: hidden;
   border-radius: var(--spacing-sm);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  max-width: 375px;
   width: 100%;
 
 
