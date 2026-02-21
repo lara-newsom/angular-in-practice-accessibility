@@ -5,7 +5,6 @@ import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-rooms',
-  standalone: true,
   imports: [ RouterLink, NgOptimizedImage],
   templateUrl: './rooms.html',
   styleUrls: ['./rooms.scss']

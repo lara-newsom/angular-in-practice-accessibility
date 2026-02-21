@@ -1,23 +1,4 @@
 <div class="reservation-card">
   <h2>Your Reservation</h2>
-  <div class="booking-details">
-    <img [ngSrc]="roomImage.src.medium" [alt]="roomImage.alt" width="375" height="500" priority>
-    <div>
-      <h3>Guest Information</h3>
-      <p><strong>Name:</strong> {{ booking().name }}</p>
-      <p><strong>Phone:</strong> {{ booking().phone }}</p>
-
-      <h3>Stay Details</h3>
-      <p><strong>Check-in:</strong> {{ booking().checkInDate | date: 'longDate' }}</p>
-      <p><strong>Check-out:</strong> {{ booking().checkOutDate | date: 'longDate' }}</p>
-      <p><strong>Number of Guests:</strong> {{ booking().guests }}</p>
-
-      <h3>Rooms</h3>
-      <ul>
-        @for (room of booking().rooms; track room.name) {
-          <li>{{ room.quantity() }} x {{ room.name }}</li>
-        }
-      </ul>
-    </div>
-  </div>
+    <p>Coming Soon...</p>
 </div>

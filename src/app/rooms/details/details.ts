@@ -4,7 +4,6 @@ import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-details',
-  standalone: true,
   imports: [NgOptimizedImage],
   templateUrl: './details.html',
   styleUrl: './details.scss',
