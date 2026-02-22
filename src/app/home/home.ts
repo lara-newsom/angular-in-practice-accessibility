@@ -1,10 +1,10 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, RouterLink],
   templateUrl: './home.html',
   styleUrls: ['./home.scss']
 })
@@ -29,11 +29,4 @@ export class Home {
       cta: 'Explore our Amenities'
     }
   ]);
-
-  router = inject(Router);
-  route = inject(ActivatedRoute);
-
-  navigateToRoute(route: string) {
-    this.router.navigate([route], { relativeTo: this.route });
-  }
 }
