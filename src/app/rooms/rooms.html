@@ -1,23 +1,28 @@
 <section class="rooms-container">
-  <div class="h1">Our Rooms</div>
+  <h1>Our Rooms</h1>
   <p>Every room is a sanctuary of comfort, thoughtfully designed with modern aesthetics and essential amenities to ensure a restful and productive stay.</p>
   <a routerLink="/book" class="cta-button">Book Now</a>
-  <h2>In-Room Amenities</h2>
-  <ul>
-    @for (amenity of amenities; track amenity) {
-      <li>{{ amenity }}</li>
-    }
-  </ul>
-  <h2>Room Types</h2>
-  <div class="rooms-grid">
-    @for (room of rooms; track room.name;) {
-      <div class="gallery-item">
-        <a [routerLink]="['/rooms', room.name]">
-          <img [ngSrc]="room.images.large" [alt]="room.description" width="375" height="500" class="gallery-image" priority>
-          <span class="gallery-cta">{{ room.name }}</span>
-        </a>
-      </div>
-    }
-  </div>
-</section>
+  
+  <section aria-labelledby="amenities-heading">
+    <h2 id="amenities-heading">In-Room Amenities</h2>
+    <ul class="amenities-list">
+      @for (amenity of amenities; track amenity) {
+        <li>{{ amenity }}</li>
+      }
+    </ul>
+  </section>
 
+  <section aria-labelledby="room-types-heading">
+    <h2 id="room-types-heading">Room Types</h2>
+    <ul class="rooms-grid">
+      @for (room of rooms; track room.name;) {
+        <li class="gallery-item">
+          <a [routerLink]="['/rooms', room.name]">
+            <img [ngSrc]="room.images.large" [alt]="room.description" width="375" height="500" class="gallery-image" priority>
+            <span class="gallery-cta">{{ room.name }}</span>
+          </a>
+        </li>
+      }
+    </ul>
+  </section>
+</section>
