@@ -9,12 +9,14 @@ export interface RoomType {
     large: string;
   };
   amenities: string[];
+  alt: string;
 }
 
 export const ROOM_TYPES: RoomType[] = [
   {
     name: 'Single Room',
-    description: 'Our cozy Single Room is perfect for solo travelers seeking comfort and convenience. Featuring a comfortable queen-sized bed, modern amenities, and a stylish design, this room offers a relaxing retreat in the heart of the city.',
+    description:
+      'Our cozy Single Room is perfect for solo travelers seeking comfort and convenience. Featuring a comfortable queen-sized bed, modern amenities, and a stylish design, this room offers a relaxing retreat in the heart of the city.',
     pricePerNight: 150,
     maxOccupancy: 2,
     images: {
@@ -29,12 +31,14 @@ export const ROOM_TYPES: RoomType[] = [
       'Coffee maker',
       'In-room safe',
       'High-speed Wi-Fi',
-      'Luxury toiletries'
-    ]
+      'Luxury toiletries',
+    ],
+    alt: 'A room with wood floors and a queen sized bed with fresh white linens with a small bedside table with an electric tea kettle.',
   },
   {
     name: 'Double Queen Room',
-    description: 'This spacious Double Queen Room is ideal for families or groups of friends. It features two comfortable queen-sized beds, modern amenities, and a stylish design, providing a relaxing retreat in the heart of the city.',
+    description:
+      'This spacious Double Queen Room is ideal for families or groups of friends. It features two comfortable queen-sized beds, modern amenities, and a stylish design, providing a relaxing retreat in the heart of the city.',
     pricePerNight: 175,
     maxOccupancy: 4,
     images: {
@@ -49,12 +53,14 @@ export const ROOM_TYPES: RoomType[] = [
       'Coffee maker',
       'In-room safe',
       'High-speed Wi-Fi',
-      'Luxury toiletries'
-    ]
+      'Luxury toiletries',
+    ],
+    alt: 'A room with tile floors and crisp white linens with a love seat and small table next to the sliding balcony door.',
   },
   {
     name: 'City Suite',
-    description: 'Experience the vibrant city life with stunning views from our City Suite. This spacious room features modern decor, a comfortable king-sized bed, and a private balcony overlooking the city skyline.',
+    description:
+      'Experience the vibrant city life with stunning views from our City Suite. This spacious room features modern decor, a comfortable king-sized bed, and a private balcony overlooking the city skyline.',
     pricePerNight: 250,
     maxOccupancy: 2,
     images: {
@@ -70,8 +76,9 @@ export const ROOM_TYPES: RoomType[] = [
       'Coffee maker',
       'In-room safe',
       'High-speed Wi-Fi',
-      'Luxury toiletries'
-    ]
+      'Luxury toiletries',
+    ],
+    alt: 'A room with wood floors and crisp white linens on a king-sized bed with a floor to ceiling corner windows overlooking the downtown skyline.',
   },
   // Additional room types can be added here
 ];
