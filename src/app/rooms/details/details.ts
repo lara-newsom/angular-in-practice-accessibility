@@ -1,10 +1,11 @@
 import { Component, computed, input } from '@angular/core';
 import { RoomType, ROOM_TYPES } from '../../shared/models/room-types';
 import { NgOptimizedImage } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-details',
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, RouterLink],
   templateUrl: './details.html',
   styleUrl: './details.scss',
 })
