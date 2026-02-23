@@ -14,8 +14,6 @@
   margin: 0 auto;
 }
 
-
-
 .logo a {
   font-weight: bold;
   font-size: var(--font-size-lg);
@@ -24,24 +22,6 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  .logo-text {
-    font-family: var(--font-family-sans-serif);
-    font-size: 2.0rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--header-color);
-  }
-}
-
-.logo div {
-  font-weight: bold;
-  font-size: var(--font-size-lg);
-  text-decoration: none;
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  cursor: pointer;
   .logo-text {
     font-family: var(--font-family-sans-serif);
     font-size: 2.0rem;
@@ -88,19 +68,6 @@
       color: var(--primary-color);
     }
   }
-
-  div {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: color 0.3s ease;
-    cursor: pointer;
-
-    &:hover, &:focus {
-      color: var(--primary-color);
-    }
-  }
-
 }
 
 // Mobile Styles

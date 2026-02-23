@@ -2,18 +2,18 @@
   <div class="logo">
     <a routerLink="/" aria-label="The Every Hotel - Home">
       <img ngSrc="assets/logos/logo.svg" alt="" width="80" height="80">
-      <span class="logo-text" aria-hidden="true">The Every Hotel</span>
+      <span class="logo-text">The Every Hotel</span>
     </a>
   </div>
   <nav class="main-nav" aria-label="Main navigation">
     <button
       class="menu-toggle"
       (click)="toggleMenu()"
-      [attr.aria-expanded]="isMenuOpen()"
+      [aria-expanded]="isMenuOpen()"
       aria-controls="nav-links-list"
     >
       <span class="sr-only">Menu</span>
-      <span class="hamburger" aria-hidden="true"></span>
+      <span class="hamburger"></span>
     </button>
     <ul id="nav-links-list" class="nav-links" [class.is-open]="isMenuOpen()">
       <li><a routerLink="/home">Home</a></li>
