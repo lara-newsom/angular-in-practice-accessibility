@@ -18,7 +18,7 @@
       @for (room of rooms; track room.name;) {
         <li class="gallery-item">
           <a [routerLink]="['/rooms', room.name]">
-            <img [ngSrc]="room.images.large" [alt]="room.description" width="375" height="500" class="gallery-image" priority>
+            <img [ngSrc]="room.images.large" [alt]="" width="375" height="500" class="gallery-image" priority>
             <span class="gallery-cta">{{ room.name }}</span>
           </a>
         </li>

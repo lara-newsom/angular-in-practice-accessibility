@@ -5,10 +5,11 @@
       <span class="logo-text">The Every Hotel</span>
     </a>
   </div>
-  <nav aria-label="Main navigation">
+  <nav aria-label="Main">
     <button
       class="menu-toggle"
       (click)="toggleMenu()"
+      [aria-expanded]="isMenuOpen()"
     >
       <span class="sr-only">Menu</span>
       <span class="hamburger"></span>

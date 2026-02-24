@@ -14,7 +14,8 @@
     @for (image of galleryImages(); track image.src) {
       <div class="gallery-item">
         <a [routerLink]="image.route" >
-          <img [ngSrc]="image.src" [alt]="image.alt" width="375" height="500" class="gallery-image" priority>
+          <!-- Removed alt text because it didn't add helpful details -->
+          <img [ngSrc]="image.src" [alt]="" width="375" height="500" class="gallery-image" priority>
           <span class="gallery-cta">{{ image.cta }}</span>
         </a>
       </div>
