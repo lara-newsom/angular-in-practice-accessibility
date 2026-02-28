@@ -1,4 +1,17 @@
 <section class="amenities-container">
   <h1>Our Amenities</h1>
-    <p>Coming Soon...</p>
+  <p>Designed for the modern traveler, our amenities provide comfort, convenience, and a touch of luxury. From our state-of-the-art fitness center to our serene rooftop pool, everything you need is right here.</p>
+  <a routerLink="/book" class="cta-button">Book Now</a>
+  <h2>Hotel Amenities</h2>
+  <ul>
+    @for(amenity of sharedAmenities; track amenity) {
+      <li>{{amenity}}</li>
+    }
+  </ul>
+  <h2>Images of our Amenities</h2>
+  <div class="amenities-grid">
+    @for (amenity of amenities; track amenity.src.thumb) {
+      <app-image-card [imageData]="amenity" />
+    }
+  </div>
 </section>
