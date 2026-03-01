@@ -3,13 +3,10 @@
 
 main{
   font-family: var(--font-family-sans-serif);
-}
-.main{
-  font-family: var(--font-family-sans-serif);
+  color: var(--text-color);
 }
 
-.cta-button {
-  display: block;
+a.styled-button, button.styled-button {
   width: fit-content;
   margin: 0 auto;
   background-color: var(--primary-color);
@@ -19,12 +16,21 @@ main{
   border-radius: var(--spacing-sm);
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  min-width: 44px;
+  min-height: 24px;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;
 
   &:hover, &:focus {
     background-color: var(--hover-color); // Darker shade of primary
   }
+  &:focus-visible {
+    outline: 2px solid var(--primary-color-dark);
+    outline-offset: 2px;
+  }
 }
+
 
 .sr-only {
   position: absolute;
@@ -47,4 +53,10 @@ main{
   overflow: visible;
   clip: auto;
   white-space: normal;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
 }
