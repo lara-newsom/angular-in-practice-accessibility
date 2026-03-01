@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { AnchorButton } from '../shared/buttons/directives/anchor-button';
 
 @Component({
   selector: 'app-home',
-  imports: [NgOptimizedImage, RouterLink],
+  imports: [NgOptimizedImage, RouterLink, AnchorButton],
   templateUrl: './home.html',
   styleUrls: ['./home.scss']
 })

@@ -1,0 +1,5 @@
+  @let title = subHeaderContentTitle();
+  <section [aria-labelledby]="title">
+    <h2 [id]="title">{{title}}</h2>
+    <ng-content select="subheader-content"></ng-content>
+  </section>
