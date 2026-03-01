@@ -3,24 +3,89 @@
   <form (submit)="book($event)">
     <h2>Reservation Details</h2>
     <div class="form-field">
+      @let nameFieldInvalid = bookingForm.name().touched() && bookingForm.name().invalid();
       <label for="name">Name:</label>
-      <input id="name" type="text" [formField]="bookingForm.name"/>
+      <input
+        id="name"
+        type="text"
+        [formField]="bookingForm.name"
+        [aria-invalid]="nameFieldInvalid"
+      />
+      @if(nameFieldInvalid) {
+        @for(error of bookingForm.name().errors(); track error) {
+          <div class="error-message">
+            <span>{{error.message}}</span>
+          </div>
+        }
+      }
     </div>
     <div class="form-field">
+      @let phoneFieldInvalid = bookingForm.phone().touched() && bookingForm.phone().invalid();
       <label for="phone">Phone:</label>
-      <input id="phone" type="tel" [formField]="bookingForm.phone"/>
+      <input
+        id="phone"
+        type="tel"
+        [formField]="bookingForm.phone"
+        [aria-invalid]="phoneFieldInvalid"
+      />
+      @if(phoneFieldInvalid) {
+        @for(error of bookingForm.phone().errors(); track error) {
+          <div class="error-message">
+            <span>{{error.message}}</span>
+          </div>
+        }
+      }
     </div>
     <div class="form-field">
+      @let checkInDateInvalid = bookingForm.checkInDate().touched() && bookingForm.checkInDate().invalid();
       <label for="check-in">Check-in Date:</label>
-      <input id="check-in" type="date" [formField]="bookingForm.checkInDate"/>
+      <input
+        id="check-in"
+        type="date"
+        [formField]="bookingForm.checkInDate"
+        [attr.aria-invalid]="checkInDateInvalid"
+      />
+      @if(checkInDateInvalid) {
+        @for(error of bookingForm.checkInDate().errors(); track error) {
+          <div class="error-message">
+            <span>{{error.message}}</span>
+          </div>
+        }
+      }
     </div>
     <div class="form-field">
+      @let checkOutDateInvalid = bookingForm.checkOutDate().touched() && bookingForm.checkOutDate().invalid();
       <label for="check-out">Check-out Date:</label>
-      <input id="check-out" type="date" [formField]="bookingForm.checkOutDate"/>
+      <input
+        id="check-out"
+        type="date"
+        [formField]="bookingForm.checkOutDate"
+        [attr.aria-invalid]="checkOutDateInvalid"
+      />
+      @if(checkOutDateInvalid) {
+        @for(error of bookingForm.checkOutDate().errors(); track error) {
+          <div class="error-message">
+            <span>{{error.message}}</span>
+          </div>
+        }
+      }
     </div>
     <div class="form-field">
+      @let guestsInvalid = bookingForm.guests().touched() && bookingForm.guests().invalid();
       <label for="guests">Number of Guests:</label>
-      <input id="guests" type="number" [formField]="bookingForm.guests"/>
+      <input
+        id="guests"
+        type="number"
+        [formField]="bookingForm.guests"
+        [attr.aria-invalid]="guestsInvalid"
+      />
+      @if(guestsInvalid) {
+        @for(error of bookingForm.guests().errors(); track error) {
+          <div class="error-message">
+            <span>{{error.message}}</span>
+          </div>
+        }
+      }
     </div>
 
     <h2>Select Rooms</h2>

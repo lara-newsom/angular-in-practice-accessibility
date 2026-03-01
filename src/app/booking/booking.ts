@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { form, FormField, required, validate } from '@angular/forms/signals';
+import { form, FormField, required, min, validate, disabled } from '@angular/forms/signals';
 import { ROOM_TYPES } from '../shared/models/room-types';
 import { CurrencyPipe } from '@angular/common';
 import { GuestBooking } from '../shared/models/booking-types';
@@ -32,19 +32,25 @@ export class Booking {
   bookingForm = form(this.bookingDetails, (schemaPath) => {
     required(schemaPath.name, {message: 'Name is required'});
     required(schemaPath.phone, {message: 'Phone is required'});
-    required(schemaPath.checkInDate, {message: 'Check-in date is required'});
+    required(schemaPath.checkInDate, {
+      message: 'Check-in date is required',
+    });
     required(schemaPath.checkOutDate, {message: 'Check-out date is required'});
+    disabled(schemaPath.checkOutDate, ({valueOf}) => !valueOf(schemaPath.checkInDate));
     required(schemaPath.guests, {message: 'Number of guests is required'});
+    min(schemaPath.guests, 1, {message: 'Number of guests must be at least 1'});
     required(schemaPath.rooms, {
       message: 'Select at least one room',
       when: ({valueOf}) => valueOf(schemaPath.rooms).length === 0
     });
     validate(schemaPath.checkInDate, ({value}) => {
+      if(!value()) return null;
       const today = new Date();
       const checkInDate = new Date(value());
       return checkInDate >= today ? null : {kind: 'checkInDateHasPassed', message: 'Check-in date cannot be in the past'};
     });
     validate(schemaPath.checkOutDate, ({value, valueOf}) => {
+      if(!value()) return null;
       const checkInDate = new Date(valueOf(schemaPath.checkInDate));
       const checkOutDate = new Date(value());
       return checkOutDate >= checkInDate ? null : {kind: 'checkOutDateIncorrect', message: 'Check-out date cannot be before or the same as check-in date'};
@@ -74,6 +80,7 @@ export class Booking {
 
   book(event: Event) {
     event.preventDefault(); // Prevent default form submission behavior
+    this.bookingForm.name().dirty()
     if (this.bookingForm().valid()) {
       this.bookingDelay.subscribe();
     }
