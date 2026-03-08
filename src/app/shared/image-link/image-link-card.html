@@ -1,0 +1,14 @@
+@let ariaLabel = linkLabel() || linkTitle();
+<div class="image-link">
+  <a [routerLink]="linkRoute()" [aria-label]="ariaLabel">
+    <img
+      [ngSrc]="imageSrc()"
+      [alt]=""
+      width="375"
+      height="500"
+      class="image-link-img"
+      priority
+    />
+    <span class="image-link-title">{{ linkTitle() }}</span>
+  </a>
+</div>

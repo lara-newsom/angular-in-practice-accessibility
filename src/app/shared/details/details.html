@@ -1,0 +1,38 @@
+@let mainTitle = config().mainHeaderTitle;
+@let imageSrc = config().imageSrc;
+@let detailSubHeaderTitle = config().detailSubHeaderTitle || 'Details';
+@let detailKeyValuePairs = config().detailKeyValuePairs;
+
+<app-breadcrumbs [segments]="breadcrumbSegments()"></app-breadcrumbs>
+
+<section [aria-labelledby]="mainTitle">
+  <h2 [id]="mainTitle">{{ mainTitle }}</h2>
+  <div class="details-content">
+    <img [ngSrc]="imageSrc" [alt]="" width="375" height="500" priority />
+    <div class="details-text-block">
+      <h3>{{ detailSubHeaderTitle }}</h3>
+      @for(pair of detailKeyValuePairs; track pair.key) {
+        <p><strong>{{ pair.key }}:</strong> {{ pair.value }}</p>
+      }
+
+      @let detailListHeader = config().detailListHeaderTitle;
+      @let detailItemList = config().detailListItems;
+      <!-- Only render detail list if a link and label are provided -->
+      @if(detailListHeader && detailItemList?.length) {
+        <h3>{{detailListHeader}}</h3>
+        <ul>
+          @for (item of detailItemList; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      }
+
+      @let routerLink = config().buttonRouterLink;
+      @let label = config().buttonLabel;
+      <!-- Only render button if a link and label are provided -->
+      @if(routerLink && label) {
+        <a routerLink="{{ routerLink }}" class="styled-button">{{ label }}</a>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+  @if (amenityData(); as amenity) {
+    <app-details
+      [config]="amenity"
+      [breadcrumbSegments]="breadcrumbSegments()"
+    />
+  } @else {
+    <h2>Uh Oh Something Went Wrong</h2>
+    <p>Amenity not found.</p>
+  }

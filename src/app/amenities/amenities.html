@@ -1,4 +1,16 @@
-<section class="amenities-container">
-  <h1>Our Amenities</h1>
-    <p>Coming Soon...</p>
+<section class="content-container">
+  <app-header-content mainHeader="Hotel Amenities">
+    <p>At The Every Hotel, we believe that a truly memorable stay is defined by the details. That's why we've curated a collection of world-class amenities designed to cater to your every need, ensuring a seamless blend of comfort, convenience, and luxury.</p>
+  </app-header-content>
+  <app-sub-header-content subHeaderContentTitle="Amenities Include:">
+    <ul class="amenities-list">
+      @for (amenity of hotelAmenities; track amenity) {
+        <li>{{ amenity }}</li>
+      }
+    </ul>
+  </app-sub-header-content>
+  <app-image-link-wrapper
+    linkWrapperTitle="Explore Our Amenities:"
+    [imageLinks]="amenities">
+  </app-image-link-wrapper>
 </section>

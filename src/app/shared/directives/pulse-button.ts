@@ -2,22 +2,22 @@ import { Directive, signal } from '@angular/core';
 
 @Directive({
   selector: 'button[appPulseButton], a[appPulseButton]',
+  standalone: true,
   host: {
+    'class': 'pulse-button',
     '[style.animation]': 'animation()',
-    '(mouseenter)': 'onEnter()',
-    '(focusin)': 'onEnter()',
-    '(mouseleave)': 'onLeave()',
-    '(focusout)': 'onLeave()',
+    '(mouseenter)': 'onMouseEnter()',
+    '(mouseleave)': 'onMouseLeave()',
   },
 })
 export class PulseButton {
   protected animation = signal('');
 
-  onEnter() {
+  onMouseEnter() {
     this.animation.set('pulse 1.5s 3');
   }
 
-  onLeave() {
+  onMouseLeave() {
     this.animation.set('');
   }
 }

@@ -1,0 +1,12 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li>
+      <a routerLink="/">Home</a>
+    </li>
+    @for (segment of segments(); track segment.route) {
+    <li>
+      <a [routerLink]="segment.route">{{ segment.title }}</a>
+    </li>
+    }
+  </ol>
+</nav>

@@ -1,10 +1,13 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { ImageLinkWrapper } from "../shared/image-link/image-link-wrapper";
+import { StyledButton } from "../shared/directives/styled-button";
+import { PulseButton } from '../shared/directives/pulse-button';
 
 @Component({
   selector: 'app-home',
-  imports: [NgOptimizedImage, RouterLink],
+  imports: [NgOptimizedImage, RouterLink, ImageLinkWrapper, StyledButton, PulseButton],
   templateUrl: './home.html',
   styleUrls: ['./home.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

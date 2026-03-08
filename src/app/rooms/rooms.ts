@@ -1,17 +1,22 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RoomType, ROOM_TYPES } from '../shared/models/room-types';
-import { RouterLink } from '@angular/router';
-import { NgOptimizedImage } from '@angular/common';
+import { ROOM_TYPES } from '../shared/models/room-types';
+import { HeaderContent } from '../shared/main-content/header-content/header-content';
+import { SubHeaderContent } from '../shared/main-content/sub-header-content/sub-header-content';
+import { ImageLinkWrapper } from '../shared/image-link/image-link-wrapper';
+import { ImageLink } from '../shared/image-link/image-link.model';
 
 @Component({
   selector: 'app-rooms',
-  imports: [ RouterLink, NgOptimizedImage],
+  imports: [ HeaderContent, SubHeaderContent, ImageLinkWrapper ],
   templateUrl: './rooms.html',
-  styleUrls: ['./rooms.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Rooms {
-  rooms: RoomType[] = ROOM_TYPES;
+  rooms: ImageLink[] = ROOM_TYPES.map((room) => ({
+    linkRoute: ['/rooms', room.name],
+    imageSrc: room.images.medium,
+    linkTitle: room.name,
+  }));
   amenities = [
     'Plush queen-sized beds',
     'High-speed Wi-Fi',

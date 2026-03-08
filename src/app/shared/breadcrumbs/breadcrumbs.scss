@@ -1,0 +1,27 @@
+.breadcrumb {
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline;
+
+    &:not(:last-child)::after {
+      content: '>';
+      margin: 0 0.5em;
+    }
+    a {
+      text-decoration: none;
+      color: var(--text-color);
+
+      &:hover {
+        text-decoration: underline;
+        color: var(--hover-color);
+      }
+      &:focus-visible {
+        outline: 2px solid var(--primary-color-dark);
+        outline-offset: 2px;
+        color: var(--hover-color);
+      }
+    }
+  }
+}
