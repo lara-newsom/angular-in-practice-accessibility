@@ -8,7 +8,7 @@ import { StyledPulseButton } from '../shared/directives/styled-pulse-button';
   imports: [NgOptimizedImage, RouterLink, StyledPulseButton],
   templateUrl: './home.html',
   styleUrls: ['./home.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home {
   galleryImages = signal([

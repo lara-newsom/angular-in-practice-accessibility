@@ -4,7 +4,7 @@
 }
 
 .rooms-container {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
   text-align: center;
 }
@@ -21,17 +21,55 @@ p {
   margin-right: auto;
 }
 
-.rooms-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-lg);
+/* Image Links */
+.photo-gallery {
+  margin: auto;
+  max-width: 1200px;
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+
+  h2 {
+    font-size: var(--font-size-header);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  div {
+    font-size: var(--font-size-header);
+    font-weight: bold;
+    margin-bottom: var(--spacing-lg);
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+  }
 }
 
+.image-link-grid {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+ul{
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+  padding: var(--spacing-sm);
+}
 li {
   list-style: none;
 }
 
-.gallery-item {
+@media (max-width: 768px) {
+  .image-link-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.image-link {
   position: relative;
   overflow: hidden;
   border-radius: var(--spacing-sm);
@@ -46,11 +84,11 @@ li {
     color: inherit;
   }
 
-  .gallery-image {
+  .image-link-img {
     transition: transform 0.3s ease;
   }
 
-  .gallery-cta {
+  .image-link-title {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -69,10 +107,10 @@ li {
 
   &:hover,
   &:focus-within {
-    .gallery-image {
+    .image-link-img {
       transform: scale(1.05);
     }
-    .gallery-cta {
+    .image-link-title {
       opacity: 1;
       transform: translateY(0);
     }

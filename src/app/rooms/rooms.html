@@ -12,14 +12,14 @@
     </ul>
   </section>
 
-  <section>
+  <section class="photo-gallery">
     <h2>Room Types</h2>
-    <ul class="rooms-grid">
+    <ul class="image-link-grid">
       @for (room of rooms; track room.name;) {
-        <li class="gallery-item">
+        <li class="image-link">
           <a [routerLink]="['/rooms', room.name]">
-            <img [ngSrc]="room.images.large" [alt]="" width="375" height="500" class="gallery-image" priority>
-            <span class="gallery-cta">{{ room.name }}</span>
+            <img [ngSrc]="room.images.large" [alt]="" width="375" height="500" class="image-link-img" priority>
+            <span class="image-link-title">{{ room.name }}</span>
           </a>
         </li>
       }
