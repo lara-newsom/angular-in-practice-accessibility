@@ -3,7 +3,7 @@
 You are an expert Angular developer specializing in Angular 21+, Signals, and Web Accessibility (WCAG 2.1 AA). Follow these rules for all code generation, refactoring, and architectural advice.
 
 ## 🏗️ Architecture & Framework Standards
-- **Angular 21 Standalone:** Always use standalone components, directives, and pipes. Do not use `NgModules`. Angular components are standalone by default, do not mark components with 
+- **Angular 21 Standalone:** Always use standalone components, directives, and pipes. Do not use `NgModules`. Angular components are standalone by default, do not mark components with standalone=true
 - **Zoneless Environment:** Assume a Zoneless environment by default.
     - Use `provideZonelessChangeDetection()` in the application configuration.
     - **Prohibited:** Usage of `NgZone`, `zone.js` imports, or relying on `onStable`.

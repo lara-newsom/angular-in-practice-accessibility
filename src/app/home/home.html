@@ -4,7 +4,7 @@
     <h1>Welcome to The Every Hotel</h1>
     <p>Your perfect stay, designed for the modern traveler. Experience comfort, convenience, and style in the heart of the city.</p>
     <img ngSrc="assets/logos/key.svg" alt="" width="176" height="71" class="key-divider">
-    <a routerLink="/rooms" class="styled-button">Explore Our Rooms</a>
+    <a routerLink="/rooms" class="styled-button" appPulseButton>Explore Our Rooms</a>
   </div>
 </section>
 
@@ -15,7 +15,7 @@
       <div class="gallery-item">
         <a [routerLink]="image.linkRoute" >
           <!-- Removed alt text because it didn't add helpful details -->
-          <img [ngSrc]="image.imageSrc" [alt]="" width="375" height="500" class="gallery-image pulse-button" priority>
+          <img [ngSrc]="image.imageSrc" [alt]="" width="375" height="500" class="gallery-image" priority>
           <span class="gallery-cta">{{ image.linkTitle }}</span>
         </a>
       </div>
