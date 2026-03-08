@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { RoomType, ROOM_TYPES } from '../../shared/models/room-types';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -8,6 +8,7 @@ import { RouterLink } from '@angular/router';
   imports: [NgOptimizedImage, RouterLink],
   templateUrl: './details.html',
   styleUrl: './details.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Details {
   roomId = input.required<string>();

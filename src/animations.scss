@@ -1,0 +1,10 @@
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    background-color: var(--primary-color-dark);
+  }
+  50% {
+    transform: scale(1.05);
+    background-color: var(--primary-color);
+  }
+}

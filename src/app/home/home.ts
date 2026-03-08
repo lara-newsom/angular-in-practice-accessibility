@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -6,24 +6,25 @@ import { RouterLink } from '@angular/router';
   selector: 'app-home',
   imports: [NgOptimizedImage, RouterLink],
   templateUrl: './home.html',
-  styleUrls: ['./home.scss']
+  styleUrls: ['./home.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Home {
   galleryImages = signal([
     {
-      src: 'assets/medium/lobby_1.jpg',
-      route: '/about',
-      cta: 'About Us'
+      imageSrc: 'assets/medium/lobby_1.jpg',
+      linkRoute: '/about',
+      linkTitle: 'About Us'
     },
     {
-      src: 'assets/medium/room_1.jpg',
-      route: '/rooms',
-      cta: 'View our Rooms'
+      imageSrc: 'assets/medium/room_1.jpg',
+      linkRoute: '/rooms',
+      linkTitle: 'View our Rooms'
     },
     {
-      src: 'assets/medium/amenities_1.jpg',
-      route: '/amenities',
-      cta: 'Explore our Amenities'
+      imageSrc: 'assets/medium/amenities_1.jpg',
+      linkRoute: '/amenities',
+      linkTitle: 'Explore our Amenities'
     }
   ]);
 }

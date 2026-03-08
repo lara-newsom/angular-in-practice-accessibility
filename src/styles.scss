@@ -1,36 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@use 'app/design-tokens';
+@use 'design-tokens';
+@use 'animations' as *;
 
 main{
   font-family: var(--font-family-sans-serif);
   color: var(--text-color);
 }
-
-a.styled-button, button.styled-button {
-  width: fit-content;
-  margin: 0 auto;
-  background-color: var(--primary-color);
-  color: var(--background-color);
-  margin-top: var(--spacing-lg);
-  padding: var(--spacing-sm) var(--spacing-lg);
-  border-radius: var(--spacing-sm);
-  text-decoration: none;
-  font-weight: bold;
-  min-width: 44px;
-  min-height: 24px;
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;
-
-  &:hover, &:focus {
-    background-color: var(--hover-color); // Darker shade of primary
-  }
-  &:focus-visible {
-    outline: 2px solid var(--primary-color-dark);
-    outline-offset: 2px;
-  }
-}
-
 
 .sr-only {
   position: absolute;
@@ -56,7 +31,46 @@ a.styled-button, button.styled-button {
 }
 
 .content-container {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
+  display: block;
+  background: var(--surface-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--box-shadow-color);
+  box-sizing: border-box;
+  padding-bottom: var(--spacing-md);
+}
+
+li {
+  list-style: none;
+  margin-top: var(--spacing-xs);
+}
+
+/* Button Styles */
+a.styled-button, button.styled-button {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--spacing-sm);
+  text-decoration: none;
+  font-weight: bold;
+  min-width: 44px;
+  min-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover, &:focus {
+    background-color: var(--hover-color);
+    animation: pulse 1.7s 3;
+  }
+  &:focus-visible {
+    outline: 2px solid var(--primary-color-dark);
+    outline-offset: 2px;
+    animation: pulse 1.7s 3;
+  }
 }

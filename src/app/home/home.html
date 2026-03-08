@@ -11,12 +11,12 @@
 <section class="photo-gallery">
   <h2>A Glimpse of Our Hotel</h2>
   <div class="gallery-container">
-    @for (image of galleryImages(); track image.src) {
+    @for (image of galleryImages(); track image.imageSrc) {
       <div class="gallery-item">
-        <a [routerLink]="image.route" >
+        <a [routerLink]="image.linkRoute" >
           <!-- Removed alt text because it didn't add helpful details -->
-          <img [ngSrc]="image.src" [alt]="" width="375" height="500" class="gallery-image" priority>
-          <span class="gallery-cta">{{ image.cta }}</span>
+          <img [ngSrc]="image.imageSrc" [alt]="" width="375" height="500" class="gallery-image pulse-button" priority>
+          <span class="gallery-cta">{{ image.linkTitle }}</span>
         </a>
       </div>
     }

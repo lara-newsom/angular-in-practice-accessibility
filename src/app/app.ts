@@ -1,4 +1,4 @@
-import { Component, DOCUMENT, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DOCUMENT, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navigation } from './navigation/navigation';
 
@@ -6,11 +6,11 @@ import { Navigation } from './navigation/navigation';
   selector: 'app-root',
   imports: [RouterOutlet, Navigation],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class App {
   protected readonly document = inject(DOCUMENT);
-  protected readonly title = signal('angular-in-practice-accessibility');
 
   protected focusFirstHeading(): void {
     const main = this.document.querySelector<HTMLElement>('main');

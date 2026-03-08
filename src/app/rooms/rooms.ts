@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RoomType, ROOM_TYPES } from '../shared/models/room-types';
 import { RouterLink } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
@@ -7,7 +7,8 @@ import { NgOptimizedImage } from '@angular/common';
   selector: 'app-rooms',
   imports: [ RouterLink, NgOptimizedImage],
   templateUrl: './rooms.html',
-  styleUrls: ['./rooms.scss']
+  styleUrls: ['./rooms.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Rooms {
   rooms: RoomType[] = ROOM_TYPES;

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -6,7 +6,8 @@ import { RouterLink } from '@angular/router';
   selector: 'app-navigation',
   imports: [RouterLink, NgOptimizedImage],
   templateUrl: './navigation.html',
-  styleUrls: ['./navigation.scss']
+  styleUrls: ['./navigation.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Navigation {
   isMenuOpen = signal(false);
