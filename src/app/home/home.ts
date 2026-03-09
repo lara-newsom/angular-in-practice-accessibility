@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { StyledPulseButton } from '../shared/directives/styled-pulse-button';
+import { ImageLink } from '../shared/image-link/image-link.model';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ import { StyledPulseButton } from '../shared/directives/styled-pulse-button';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home {
-  galleryImages = signal([
+  galleryImages = signal<ImageLink[]>([
     {
       imageSrc: 'assets/medium/lobby_1.jpg',
       linkRoute: '/about',

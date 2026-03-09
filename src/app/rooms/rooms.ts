@@ -12,6 +12,8 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class Rooms {
   rooms: RoomType[] = ROOM_TYPES;
+  // map rooms to ImageLink objects for use with the ImageLinkWrapper
+
   amenities = [
     'Plush queen-sized beds',
     'High-speed Wi-Fi',
