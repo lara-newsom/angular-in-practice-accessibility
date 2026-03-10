@@ -17,7 +17,6 @@ export class Rooms {
     imageSrc: room.images.medium,
     linkTitle: room.name
   }));
-  // map rooms to ImageLink objects for use with the ImageLinkWrapper
 
   amenities = [
     'Plush queen-sized beds',
