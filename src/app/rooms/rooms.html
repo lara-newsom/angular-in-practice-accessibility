@@ -1,16 +1,19 @@
-<section class="rooms-container">
-  <h1>Our Rooms</h1>
-  <p>Every room is a sanctuary of comfort, thoughtfully designed with modern aesthetics and essential amenities to ensure a restful and productive stay.</p>
-  <a routerLink="/book" class="styled-button">Book Now</a>
+<section class="content-container">
+  <app-header-content
+  mainHeader="Our Rooms"
+  >
+    <p>Every room is a sanctuary of comfort, thoughtfully designed with modern aesthetics and essential amenities to ensure a restful and productive stay.</p>
+  </app-header-content>
 
-  <section>
-    <h2>In-Room Amenities</h2>
+  <app-sub-header-content
+  subHeaderContentTitle="In-Room Amenities"
+  >
     <ul class="amenities-list">
       @for (amenity of amenities; track amenity) {
         <li>{{ amenity }}</li>
       }
     </ul>
-  </section>
+  </app-sub-header-content>
 
-  <app-image-link-wrapper [imageLinks]="rooms" [linkWrapperTitle]="'Explore Our Rooms'"/>"
+  <app-image-link-wrapper [imageLinks]="rooms" [linkWrapperTitle]="'Explore Our Rooms'"/>
 </section>

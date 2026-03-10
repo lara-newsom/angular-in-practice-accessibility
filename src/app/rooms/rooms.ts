@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ROOM_TYPES } from '../shared/models/room-types';
-import { RouterLink } from '@angular/router';
 import { ImageLinkWrapper } from '../shared/image-link/image-link-wrapper';
 import { ImageLink } from '../shared/image-link/image-link.model';
+import { HeaderContent } from '../shared/main-content/header-content/header-content';
+import { SubHeaderContent } from '../shared/main-content/sub-header-content/sub-header-content';
 
 @Component({
   selector: 'app-rooms',
-  imports: [ RouterLink, ImageLinkWrapper ],
+  imports: [ ImageLinkWrapper, HeaderContent, SubHeaderContent ],
   templateUrl: './rooms.html',
-  styleUrls: ['./rooms.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Rooms {

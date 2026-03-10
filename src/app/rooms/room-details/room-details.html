@@ -1,0 +1,9 @@
+  @if (roomData(); as room) {
+    <app-details
+      [config]="room"
+      [breadcrumbSegments]="breadcrumbSegments()"
+    />
+  } @else {
+    <h2>Uh Oh Something Went Wrong</h2>
+    <p>Room not found.</p>
+  }
