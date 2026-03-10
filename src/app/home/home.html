@@ -8,17 +8,7 @@
   </div>
 </section>
 
-<section class="photo-gallery">
-  <h2>A Glimpse of Our Hotel</h2>
-  <ul class="image-link-grid">
-    @for (image of galleryImages(); track image.imageSrc) {
-      <li class="image-link">
-        <a [routerLink]="image.linkRoute" >
-          <!-- Removed alt text because it didn't add helpful details -->
-          <img [ngSrc]="image.imageSrc" [alt]="" width="375" height="500" class="image-link-img" priority>
-          <span class="image-link-title">{{ image.linkTitle }}</span>
-        </a>
-      </li>
-    }
-  </ul>
-</section>
+<app-image-link-wrapper
+  [imageLinks]="galleryImages()"
+  [linkWrapperTitle]="'A Glimpse of Our Hotel'"
+/>

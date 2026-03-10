@@ -1,0 +1,14 @@
+@let title = linkWrapperTitle();
+<section [aria-labelledby]="title" class="photo-gallery">
+  <h2 [id]="title">{{title}}</h2>
+  <ul class="image-link-grid">
+    @for (image of imageLinks(); track image.imageSrc) {
+      <app-image-link-card
+        [linkRoute]="image.linkRoute"
+        [imageSrc]="image.imageSrc"
+        [linkTitle]="image.linkTitle"
+        [linkLabel]="image.linkLabel"
+      />
+    }
+  </ul>
+</section>
