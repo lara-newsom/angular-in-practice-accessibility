@@ -1,10 +1,55 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined');
 :host {
   display: block;
   padding: var(--spacing-xl) var(--spacing-md);
 }
 
-.about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
+.faq-accordion {
+  text-align: left;
+  margin: auto;
+  max-width: 700px;
+  div {
+    background: var(--surface-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--heading-color);
+  box-sizing: border-box;
+  position: relative;
+  padding: var(--spacing-md);
+  background-color: var(--background-contrast-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  &:hover {
+    background-color: var(--background-hover-color);
+    cursor: pointer;
+  }
+  .expand-icon {
+    font-size: 2rem;
+    margin-left: var(--spacing-sm);
+  }
+}
+h3:focus-within::before,
+h3:hover::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: var(--primary-color);
+  top: 0;
+  left: 0;
+}
+p {
+  margin: 0;
+  padding: var(--spacing-md);
+  color: var(--text-color);
+  font-size: var(--font-size-sm);
 }
