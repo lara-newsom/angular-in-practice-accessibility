@@ -7,55 +7,79 @@
     </p>
   </app-header-content>
   <app-sub-header-content subHeaderContentTitle="Frequently Asked Questions">
-    <div class="faq-accordion">
+    <div class="faq-accordion" ngAccordionGroup multiExpandable="false">
       <div>
-        <h3>
+        <h3 ngAccordionTrigger panelId="q1" #trigger1="ngAccordionTrigger">
           <span> What are the check-in and check-out times? </span>
-          <span class="expand-icon"></span>
+          <span
+            class="expand-icon"
+            [class.expand-icon__expanded]="trigger1.expanded()"
+            aria-hidden="true"
+          ></span>
         </h3>
-        <div>
+        <div ngAccordionPanel panelId="q1">
+          <ng-template ngAccordionContent>
             <p>
               Check-in begins at 3:00 PM, and check-out is at 11:00 AM. Early check-in and late
               check-out options are available upon request and subject to availability.
             </p>
+          </ng-template>
         </div>
       </div>
       <div>
-        <h3>
+        <h3 ngAccordionTrigger panelId="q2" #trigger2="ngAccordionTrigger">
           <span>
             Is parking available at the hotel?
           </span>
-          <span class="expand-icon"></span>
+          <span
+            class="expand-icon"
+            [class.expand-icon__expanded]="trigger2.expanded()"
+            aria-hidden="true"
+          ></span>
         </h3>
-        <div>
+        <div ngAccordionPanel panelId="q2">
+          <ng-template ngAccordionContent>
             <p>
               Yes, we offer secure on-site valet parking for $35 per night with unlimited in and out
               privileges. Self-parking is also available in the adjacent garage.
             </p>
+          </ng-template>
         </div>
       </div>
       <div>
-        <h3>
+        <h3 ngAccordionTrigger panelId="q3" #trigger3="ngAccordionTrigger">
           <span> Do you offer accessible rooms? </span
-          ><span class="expand-icon"></span>
+          ><span
+            class="expand-icon"
+            [class.expand-icon__expanded]="trigger3.expanded()"
+            aria-hidden="true"
+          ></span>
         </h3>
-        <div>
+        <div ngAccordionPanel panelId="q3">
+          <ng-template ngAccordionContent>
             <p>
               Absolutely. We have a variety of ADA-compliant rooms featuring roll-in showers, grab
               bars, and visual alarm notifications. Please mention your specific needs when booking.
             </p>
+          </ng-template>
         </div>
       </div>
       <div>
-        <h3>
+        <h3 ngAccordionTrigger panelId="q4" #trigger4="ngAccordionTrigger">
           <span> Is the hotel pet-friendly? </span
-          ><span class="expand-icon"></span>
+          ><span
+            class="expand-icon"
+            [class.expand-icon__expanded]="trigger4.expanded()"
+            aria-hidden="true"
+          ></span>
         </h3>
-        <div>
+        <div ngAccordionPanel panelId="q4">
+          <ng-template ngAccordionContent>
             <p>
               Yes, we love pets! We welcome up to two pets per room with a non-refundable cleaning
               fee of $50 per stay. Service animals are exempt from fees
             </p>
+          </ng-template>
         </div>
       </div>
     </div>
