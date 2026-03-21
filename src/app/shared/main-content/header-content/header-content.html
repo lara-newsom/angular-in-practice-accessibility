@@ -1,5 +1,14 @@
 <div class="header-container">
-  <h1>{{mainHeader()}}</h1>
+  @if(ariaLive()){
+    <h1
+      aria-live="polite"
+      role="status"
+    >{{mainHeader()}}</h1>
+  } @else {
+    <h1>{{mainHeader()}}</h1>
+  }
   <ng-content></ng-content>
-  <a routerLink="/book" appStyledPulseButton>Book Now</a>
+  @if(!hideButton()){
+    <a routerLink="/book" appStyledPulseButton>Book Now</a>
+  }
 </div>
