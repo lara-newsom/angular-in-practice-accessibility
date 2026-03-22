@@ -1,94 +1,112 @@
 @if (bookingStatus() === 'started') {
-  <app-header-content mainHeader="Book Your Stay" hideButton>
+  <app-header-content
+    mainHeader="Book Your Stay"
+    hideButton
+  >
     <p>Use the form below to book your stay with us. We look forward to hosting you!</p>
   </app-header-content>
 
-  <app-sub-header-content subHeaderContentTitle="Reservation Details">
-    <form (submit)="book($event)">
-      <div class="form-field">
-        <label for="name">Name</label>
-        <input id="name" placeholder="Full Name" [formField]="bookingForm.name" />
+  <app-sub-header-content
+    subHeaderContentTitle="Reservation Details"
+  >
+  <form (submit)="book($event)">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Full Name" [formField]="bookingForm.name" />
 
-        @for (error of bookingForm.name().errors(); track error) {
-          <p>{{ error.message }}</p>
-        }
-      </div>
-      <div class="form-field">
-        <label for="phone">Phone</label>
-        <input id="phone" type="tel" placeholder="Phone number" [formField]="bookingForm.phone" />
+      @for (error of bookingForm.name().errors(); track error) {
+        <mat-error>{{ error.message }} </mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Phone</mat-label>
+      <input matInput type="tel" placeholder="Phone number" [formField]="bookingForm.phone" />
 
-        @for (error of bookingForm.phone().errors(); track error) {
-          <p>{{ error.message }}</p>
-        }
-      </div>
-      <div class="form-field">
-        <label for="checkin">Check-in Date</label>
-        <input id="checkin" placeholder="Check-in Date" [formField]="bookingForm.checkInDate" />
-        @for (error of bookingForm.checkInDate().errors(); track error) {
-          <p>{{ error.message }}</p>
-        }
-      </div>
+      @for (error of bookingForm.phone().errors(); track error) {
+        <mat-error>{{ error.message }} </mat-error>
+      }
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Check-in Date</mat-label>
+      <input
+        matInput
+        [matDatepicker]="checkInPicker"
+        placeholder="Check-in Date"
+        [formField]="bookingForm.checkInDate"
+      >
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="checkInPicker"></mat-datepicker-toggle>
+      <mat-datepicker #checkInPicker></mat-datepicker>
+      @for (error of bookingForm.checkInDate().errors(); track error) {
+        <mat-error>{{ error.message }} </mat-error>
+      }
+    </mat-form-field>
 
-      <div class="form-field">
-        <label for="checkout">Check-out Date</label>
-        <input id="checkout" placeholder="Check-out Date" [formField]="bookingForm.checkOutDate" />
-        @for (error of bookingForm.checkOutDate().errors(); track error) {
-          <p>{{ error.message }}</p>
-        }
-      </div>
+    <mat-form-field>
+      <mat-label>Check-out Date</mat-label>
+      <input
+        matInput
+        [matDatepicker]="checkOutPicker"
+        placeholder="Check-out Date"
+        [formField]="bookingForm.checkOutDate"
+      >
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="checkOutPicker"></mat-datepicker-toggle>
+      <mat-datepicker #checkOutPicker></mat-datepicker>
+      @for (error of bookingForm.checkOutDate().errors(); track error) {
+        <mat-error>{{ error.message }} </mat-error>
+      }
+    </mat-form-field>
 
-      <div class="form-field">
-        <label for="guests">Number of Guests</label>
-        <input
-          id="guests"
-          type="number"
-          placeholder="Number of guests"
-          [formField]="bookingForm.guests"
-        />
+    <mat-form-field>
+      <mat-label>Number of Guests</mat-label>
+      <input matInput type="number" placeholder="Number of guests" [formField]="bookingForm.guests" />
 
-        @for (error of bookingForm.guests().errors(); track error) {
-          <p>{{ error.message }}</p>
-        }
-      </div>
+      @for (error of bookingForm.guests().errors(); track error) {
+        <mat-error>{{ error.message }} </mat-error>
+      }
+    </mat-form-field>
 
-      <h3>Select Rooms</h3>
-      <div class="rooms-selection-grid">
-        @for (room of ROOM_TYPES; track room.name) {
-          <div>
-            <div>
-              <h3>{{ room.name }}</h3>
-            </div>
-            <img [src]="room.images.thumb" [alt]="" />
-            <div>
-              <p>
-                <b>Price Per Night: {{ room.pricePerNight | currency }}</b>
-              </p>
-            </div>
-            <div class="form-field">
-              <label [for]="room.name">Quantity</label>
-              <input
-                [id]="room.name"
-                type="number"
-                type="number"
-                (change)="updateRooms(room.name)"
-                [aria-label]="'Quantity for ' + room.name"
-              />
-            </div>
-          </div>
-        }
-      </div>
+    <h3>Select Rooms</h3>
+    <div class="rooms-selection-grid">
+      @for (room of ROOM_TYPES; track room.name) {
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{ room.name }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="room.images.thumb" [alt]="" />
+          <mat-card-content>
+            <p><b>Price Per Night: {{ room.pricePerNight | currency }}</b></p>
+          </mat-card-content>
+          <mat-form-field>
+            <mat-label>Quantity</mat-label>
+            <input type="number" matInput type="number" (change)="updateRooms(room.name)" [aria-label]="'Quantity for ' + room.name"/>
 
-      <button type="submit" [disabled]="!bookingForm().valid()" appStyledPulseButton>
-        Book Now
-      </button>
-    </form>
+          </mat-form-field>
+        </mat-card>
+      }
+    </div>
+
+    <button type="submit" [disabled]="!bookingForm().valid()" appStyledPulseButton>Book Now</button>
+  </form>
   </app-sub-header-content>
+
 } @else if (bookingStatus() === 'booked') {
-  <app-header-content ariaLive mainHeader="Thank You for Your Reservation" hideButton>
+  <app-header-content
+    ariaLive
+    mainHeader="Thank You for Your Reservation"
+    hideButton
+  >
     <app-reservation [booking]="bookingDetails()" />
   </app-header-content>
 } @else {
-  <app-header-content ariaLive mainHeader="Booking Your Reservation" hideButton>
+  <app-header-content
+    ariaLive
+    mainHeader="Booking Your Reservation"
+    hideButton
+  >
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
     <p>Please wait while we process your reservation.</p>
   </app-header-content>
 }
+

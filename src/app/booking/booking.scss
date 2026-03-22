@@ -1,3 +1,5 @@
+@use '@angular/material' as mat;
+
 :host {
   display: block;
   max-width: 800px;
@@ -26,4 +28,33 @@ h2 {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+}
+
+mat-card {
+  @include mat.card-overrides((
+    title-text-size: 1.2rem,
+    title-text-weight: 600,
+    elevated-container-color: var(--background-hover-color)
+  ));
+}
+
+mat-card {
+  margin: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: var(--spacing-sm);
+  &:first-of-type {
+    margin-left: 0;
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+mat-form-field {
+  width: 95%;
+  margin-top: 1.5rem;
 }
