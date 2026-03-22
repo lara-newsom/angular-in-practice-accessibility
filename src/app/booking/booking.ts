@@ -7,11 +7,18 @@ import { Reservation } from '../reservation/reservation';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { delay, of, tap } from 'rxjs';
 import { StyledPulseButton } from '../shared/directives/styled-pulse-button';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatCardModule} from '@angular/material/card';
 import { HeaderContent } from '../shared/main-content/header-content/header-content';
 import { SubHeaderContent } from '../shared/main-content/sub-header-content/sub-header-content';
-
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 @Component({
   selector: 'app-booking',
+  providers: [provideNativeDateAdapter()],
   imports: [
     FormField,
     CurrencyPipe,
@@ -19,6 +26,12 @@ import { SubHeaderContent } from '../shared/main-content/sub-header-content/sub-
     StyledPulseButton,
     HeaderContent,
     SubHeaderContent,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatCardModule,
+    MatProgressBarModule
   ],
   templateUrl: './booking.html',
   styleUrl: './booking.scss',
