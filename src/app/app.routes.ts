@@ -8,13 +8,13 @@ import { RoomDetails } from './rooms/room-details/room-details';
 import { AmenityDetails } from './amenities/amenities-details/amenities-details';
 
 export const routes: Routes = [
-  { path: 'home', component: Home },
-  { path: 'rooms', component: Rooms },
-  { path: 'rooms/:roomId', component: RoomDetails },
-  { path: 'amenities', component: Amenities },
-  { path: 'amenities/:amenityId', component: AmenityDetails },
-  { path: 'about', component: About },
-  { path: 'book', component: Booking },
+  { path: 'home', component: Home, title: 'The Every Hotel - Home' },
+  { path: 'rooms', component: Rooms, title: 'The Every Hotel - Rooms' },
+  { path: 'rooms/:roomId', component: RoomDetails,  title: 'The Every Hotel - Room Details' },
+  { path: 'amenities', component: Amenities, title: 'The Every Hotel - Amenities' },
+  { path: 'amenities/:amenityId', component: AmenityDetails, title: 'The Every Hotel - Amenity Details' },
+  { path: 'about', component: About, title: 'The Every Hotel - About Us' },
+  { path: 'book', component: Booking, title: 'The Every Hotel - Book Now' },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' }
 ];
